@@ -1,0 +1,43 @@
+#include <Arduino.h>
+int W,V,U;
+int A,B,C,D;
+
+
+void disp_7474(int D,int C,int B,int A)
+{
+   digitalWrite(2,A);//lsb
+   digitalWrite(3,B);
+   digitalWrite(4,C);
+
+}
+
+void setup() {
+  pinMode(2, INPUT);
+  pinMode(3, INPUT);
+  pinMode(4, INPUT);
+  pinMode(8,OUTPUT);
+
+}
+
+
+void loop()
+{
+
+  W = digitalRead(6);
+  X = digitalRead(7);
+  Y = digitalRead(8);
+  Z = digitalRead(9);
+
+  A = (!W);
+  B = (X&&!W) || (!Z&&!X&&W);
+  C = (Y&&!X) || (Y&&!W) || (!Z&&!Y&&X&&W);
+  D = (Z&&!W) || (Y&&X&&W);
+
+  disp_7474(D,C,B,A);
+  digitalWrite(13,LOW);
+  delay(500);
+}
+
+
+
+
