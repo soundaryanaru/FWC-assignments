@@ -1,0 +1,70 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+
+\twocolumn
+\usepackage{graphicx}
+\usepackage{karnaugh-map}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{amssymb}
+\usepackage{listings}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\begin{document}
+\title{Optimization Assignment}
+\author{Name:Soundarya Naru\and Email :  \url{narusoundarya2002@gmail.com.com}}
+%\{ Wireless Communication (FWC)}
+\date{}
+\maketitle
+  \section{Problem}
+If the sum of the lengths of the hypotenuse and a side of a right-angled triangle is given,show that the area of the triangle is maximum when the angle between them is $\frac{\pi}{3}$.
+\section{Solution}
+Let the hypotenuse of the right triangle be x and the height by y.\\
+\begin{center}
+	Hence its base is $\sqrt{{x^2}-{y^2}}$\\
+	Hence its area = $(\sqrt{{x^2}-{y^2}}){y}/2$\\
+	But it is given $x+y=p$\\
+	substituting this in the area,we get\\
+	\begin{equation}
+	Area=\sqrt{(({p-y})^2-{y^2}}){y}/2
+	\end{equation}
+	squaring on both sides,we get\\
+	\end{center}
+	\begin{equation}
+	A={p^2}{y^2}/4-{p}{y^3}/2\\
+	\end{equation}
+For Maximum or minimum area\\
+\begin{equation}
+\frac{dy}{dA}=0
+\end{equation}
+Here the area of the triangle is maximum when\\
+\begin{equation}
+x=2p/3,y=p/3
+\end{equation}
+\begin{equation}
+cos{\theta}=y/x
+\end{equation}
+\begin{equation}
+cos{\theta}=\frac{p/3}{2p/3}
+\end{equation}
+\begin{equation}
+cos{\theta}=1/2\\
+\end{equation}
+\begin{equation}
+\theta=\frac{\pi}{3} (or) {60}^{\circ}
+\end{equation}
+Hence,the area is maximum if the angle between the hypotenuse and side is ${60}^{\circ}$.\\
+\section{Execution}
+Verify the above proofs in the following code.\\
+\begin{lstlisting}
+https://github.com/soundaryanaru/FWC-assignments/blob/main/Optimization/Advance/code/op2.py
+\end{lstlisting}
+ \bibliographystyle{ieeetr}
+\end{document}
