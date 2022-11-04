@@ -28,7 +28,12 @@ void OTAloop() {
 }
 
 //-------------------------------------------------------//
-
+int U,V,Z,W;
+INT A,B,C,D;
+void disp_7447(int D,int C,int B,int A);
+{
+	digitalwrite(2,A)
+}
 void setup(){
   OTAsetup();
   pinMode(2, OUTPUT);
@@ -47,7 +52,7 @@ void loop() {
   V = digitalRead(7);
   W= digitalRead(8);
   A = (U&&V) || (U&&!W);
-  digitalWrite(2,A)
+  disp_7447(int D,int C,int B,int A);
   delay(10);  // If no custom loop code ensure to have a delay in loop
   //-------------------//
   // Custom loop code  //
