@@ -28,7 +28,7 @@ void OTAloop() {
 }
 
 //-------------------------------------------------------//
-int U,V,Z,W;
+int U,V,W;
 INT A,B,C,D;
 void disp_7447(int D,int C,int B,int A);
 {
